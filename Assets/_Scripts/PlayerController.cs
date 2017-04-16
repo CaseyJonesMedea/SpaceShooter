@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		rightMax = new Vector3 (5.3f,1,-5.5f);
-		leftMax = new Vector3 (-5.3f,1,-5.5f);
+		rightMax = new Vector3 (4.9f,1,-5.5f);
+		leftMax = new Vector3 (-4.9f,1,-5.5f);
 		typeClick = 0;
 	}
 
@@ -39,12 +39,10 @@ public class PlayerController : MonoBehaviour
 	{
 		switch (gameObject.name) {
 		case "Button_Left":
-			Debug.Log ("Button_Left OnMouseDown");
 			typeClick = 1;
 			player.transform.rotation = Quaternion.Euler (0.0f, 0.0f, tilt);
 			break;
 		case "Button_Right":
-			Debug.Log ("Button_Right OnMouseDown");
 			typeClick = -1;
 			player.transform.rotation = Quaternion.Euler (0.0f, 0.0f, tilt);
 			break;
@@ -55,12 +53,10 @@ public class PlayerController : MonoBehaviour
 	{
 		switch (gameObject.name) {
 		case "Button_Left":
-			Debug.Log ("Button_Left OnMouseUp");
 			typeClick = 0;
 			player.transform.rotation = Quaternion.identity;
 			break;
 		case "Button_Right":
-			Debug.Log ("Button_Right OnMouseUp");
 			typeClick = 0;
 			player.transform.rotation = Quaternion.identity;
 			break;

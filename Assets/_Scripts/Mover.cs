@@ -6,7 +6,8 @@ public class Mover : MonoBehaviour {
 	public float speed;
 
 	void Start () {
-		GetComponent<Rigidbody>().velocity = transform.forward * speed;
+        GetComponent<AudioSource>().Play();
+        GetComponent<Rigidbody>().velocity = transform.forward * speed;
 	}
 
 }
